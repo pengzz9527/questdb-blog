@@ -2,7 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   {{- range .Site.Pages }}
-  {{- if and .Permalink (not (in .RelPermalink "/page/")) }}
+  {{- $excludePage := false }}
+  {{- if and .Permalink (in .RelPermalink "/page/") }}
+  {{- $excludePage = true }}
+  {{- if or (in .RelPermalink "/page/author/") (in .RelPermalink "/page/editorial/") (in .RelPermalink "/page/correction/") }}
+  {{- $excludePage = false }}
+  {{- end }}
+  {{- end }}
+  {{- if and .Permalink (not $excludePage) }}
   {{- $robots := .Params.robots }}
   {{- if and (not $robots) (not .Params.sitemap_exclude) (ne .Kind "taxonomy") (ne .Kind "term") }}
   {{- if not (in .RelPermalink "/search/") }}
