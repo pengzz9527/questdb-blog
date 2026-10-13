@@ -1,0 +1,223 @@
+baseURL: "https://questdblab.org/"
+title: "时序实验室"
+theme: "stack"
+defaultContentLanguage: "zh"
+defaultContentLanguageInSubdir: true
+enableRobotsTXT: true
+paginate: 30
+enableEmoji: true
+hasCJKLanguage: true
+
+languages:
+  zh:
+    contentDir: "content/zh"
+    label: "中文"
+    locale: "zh-CN"
+    weight: 1
+    title: "QuestDB Lab — 独立 QuestDB 中文技术社区与实验博客"
+    description: "QuestDB 中文技术博客：实战教程、性能测试、生产部署经验。独立社区项目，不代表 QuestDB 官方。"
+    params:
+      sidebar:
+        subtitle: "QuestDB 中文技术博客与实验记录"
+      footer:
+        since: 2026
+        customText: |
+          <a href="/zh/about/">关于</a> ·
+          <a href="/zh/privacy/">隐私政策</a> ·
+          <a href="/zh/contact/">联系我们</a> ·
+          <a href="/zh/terms/">服务条款</a>
+    menu:
+      main:
+        - identifier: home
+          name: "首页"
+          url: "/zh/"
+          weight: 10
+        - identifier: post
+          name: "文章"
+          url: "/zh/post/"
+          weight: 20
+        - identifier: categories
+          name: "分类"
+          url: "/zh/categories/"
+          weight: 30
+        - identifier: tags
+          name: "标签"
+          url: "/zh/tags/"
+          weight: 40
+        - identifier: search
+          name: "搜索"
+          url: "/zh/search/"
+          weight: 50
+        - identifier: cheatsheet
+          name: "速查表"
+          url: "/zh/cheatsheet/"
+          weight: 60
+        - identifier: newsletter
+          name: "订阅"
+          url: "/zh/newsletter/"
+          weight: 70
+        - identifier: about
+          name: "关于"
+          url: "/zh/about/"
+          weight: 80
+        - identifier: contact
+          name: "联系我们"
+          url: "/zh/contact/"
+          weight: 85
+        - identifier: privacy
+          name: "隐私政策"
+          url: "/zh/privacy/"
+          weight: 90
+        - identifier: author
+          name: "作者"
+          url: "/zh/page/author/"
+          weight: 91
+        - identifier: terms
+          name: "服务条款"
+          url: "/zh/terms/"
+          weight: 92
+        - identifier: editorial
+          name: "编辑政策"
+          url: "/zh/page/editorial/"
+          weight: 93
+        - identifier: correction
+          name: "更正政策"
+          url: "/zh/page/correction/"
+          weight: 94
+
+  en:
+    contentDir: "content/en"
+    label: "English"
+    locale: "en-US"
+    weight: 2
+    title: "QuestDB Lab — Independent QuestDB Technical Blog"
+    description: "Independent QuestDB Chinese-language technical blog: tutorials, benchmarks, and production deployment guides. Not affiliated with QuestDB official project."
+    params:
+      sidebar:
+        subtitle: "QuestDB Technical Blog & Experiments"
+      footer:
+        since: 2026
+        customText: |
+          <a href="/en/about/">About</a> ·
+          <a href="/en/privacy/">Privacy Policy</a> ·
+          <a href="/en/contact/">Contact</a> ·
+          <a href="/en/terms/">Terms</a>
+    menu:
+      main:
+        - identifier: home
+          name: "Home"
+          url: "/en/"
+          weight: 10
+        - identifier: post
+          name: "Posts"
+          url: "/en/post/"
+          weight: 20
+        - identifier: categories
+          name: "Categories"
+          url: "/en/categories/"
+          weight: 30
+        - identifier: tags
+          name: "Tags"
+          url: "/en/tags/"
+          weight: 40
+        - identifier: search
+          name: "Search"
+          url: "/en/search/"
+          weight: 50
+        - identifier: cheatsheet
+          name: "Cheatsheet"
+          url: "/en/cheatsheet/"
+          weight: 60
+        - identifier: newsletter
+          name: "Newsletter"
+          url: "/en/newsletter/"
+          weight: 70
+        - identifier: about
+          name: "About"
+          url: "/en/about/"
+          weight: 80
+        - identifier: contact
+          name: "Contact"
+          url: "/en/contact/"
+          weight: 85
+        - identifier: privacy
+          name: "Privacy Policy"
+          url: "/en/privacy/"
+          weight: 90
+        - identifier: author
+          name: "Author"
+          url: "/en/page/author/"
+          weight: 91
+        - identifier: terms
+          name: "Terms"
+          url: "/en/terms/"
+          weight: 92
+        - identifier: editorial
+          name: "Editorial"
+          url: "/en/page/editorial/"
+          weight: 93
+        - identifier: correction
+          name: "Corrections"
+          url: "/en/page/correction/"
+          weight: 94
+
+params:
+  author: "Ross Zhang"
+  images:
+    - social-card.png
+  favicon: "/images/favicon.ico"
+  cookies:
+    enabled: false
+  ImageProcessing:
+    cover:
+      enabled: true
+    content:
+      enabled: true
+    thumbnail:
+      enabled: true
+
+  umami:
+    serverURL: "https://umami.questdblab.org"
+    websiteID: "ff3cdf0a-cfc8-4e14-bf8f-ebc64338be4a"
+
+  sidebar:
+    avatar: "/images/avatar.png"
+    compact: false
+    status: "https://status.questdblab.org"
+  widgets:
+    homepage:
+      - type: search
+      - type: archives
+        params:
+          limit: 10
+      - type: categories
+        params:
+          limit: 10
+    page:
+      - type: toc
+
+markup:
+  highlight:
+    noClasses: false
+  goldmark:
+    renderer:
+      unsafe: true
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+  page:
+    - HTML
+    - JSON
+
+# 流量上来后再启用评论区
+# services:
+#   disqus:
+#     shortname: "questdblab"
+
+social:
+  email: "admin@questdblab.org"
+  github: "pengzz9527"
+  youtube: "@QuestDBLab"

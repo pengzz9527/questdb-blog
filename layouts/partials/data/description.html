@@ -1,0 +1,29 @@
+{{- /* Custom description partial for QuestDBLab - fixed language-aware description */ -}}
+{{- $description := "" -}}
+
+{{- /* Priority: 1. Page .Description, 2. Page .Summary, 3. Site description */ -}}
+
+{{- /* 优先使用页面 .Description (frontmatter 中的 description 字段) */ -}}
+{{- if .Description -}}
+    {{- $description = .Description -}}
+{{- /* 其次使用页面 Summary */ -}}
+{{- else if .IsPage -}}
+    {{- $description = .Summary -}}
+{{- /* 最后使用站点 description */ -}}
+{{- else -}}
+    {{- /* 尝试从 params 获取 */ -}}
+    {{- $langDesc := .Site.Params.description -}}
+    {{- if $langDesc -}}
+        {{- $description = $langDesc -}}
+    {{- else -}}
+        {{- /* 备用默认描述 */ -}}
+        {{- if eq .Language.Lang "zh" -}}
+            {{- $description = "QuestDB 中文技术社区：实战教程、性能测试、生产部署经验。独立社区项目，不代表 DuckDB 官方。" -}}
+        {{- else -}}
+            {{- $description = "Independent QuestDB time-series database blog: tutorials, benchmarks, and production deployment guides. Not affiliated with QuestDB official project." -}}
+        {{- end -}}
+    {{- end -}}
+{{- end -}}
+
+{{- /* 清理换行符和多余空格，限制长度 */ -}}
+{{- return (replaceRE "\n" " " $description | plainify | truncate 160) -}}

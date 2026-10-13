@@ -1,0 +1,24 @@
+{{- /* Custom title partial for QuestDBLab - SEO optimized */ -}}
+{{- $pageTitle := .Title -}}
+{{- $siteTitle := .Site.Title -}}
+{{- $paginator := partial "helper/paginator.html" . -}}
+
+{{- $title := slice -}}
+
+{{- if and $paginator $paginator.HasPrev -}}
+    <!-- Add page number-->
+    {{ $title = $title | append (printf "Page %d" $paginator.PageNumber) }}
+{{- end -}}
+
+{{- /* Homepage gets SEO-optimized title */ -}}
+{{- if .IsHome -}}
+    {{- if eq .Language.Lang "zh" -}}
+        {{- $title = $title | append "QuestDB 中文技术社区 | 实战教程与性能基准测试 - Time-Series Lab" -}}
+    {{- else -}}
+        {{- $title = $title | append "QuestDB Technical Blog | Tutorials & Benchmarks - Time-Series Lab" -}}
+    {{- end -}}
+{{- else -}}
+    {{- $title = $title | append (default $siteTitle $pageTitle) -}}
+{{- end -}}
+
+{{ return delimit $title " - " }}

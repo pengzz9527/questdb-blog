@@ -1,0 +1,15 @@
+{{- $pages := where .Site.RegularPages "Section" "in" (slice "posts" "en/posts" "zh/posts") -}}
+{{- $result := slice -}}
+
+{{- range $pages -}}
+    {{- $data := dict "title" .Title "date" .Date "permalink" .RelPermalink "content" (.Plain | truncate 200) -}}
+
+    {{- $image := partial "helper/image" (dict "Image" .Params.image "Resources" .Resources "Context" .) -}}
+    {{- if $image -}}
+        {{- $data = merge $data (dict "image" $image.Permalink) -}}
+    {{- end -}}
+
+    {{- $result = $result | append $data -}}
+{{- end -}}
+
+{{ jsonify $result }}

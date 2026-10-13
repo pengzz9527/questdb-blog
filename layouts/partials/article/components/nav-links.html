@@ -1,0 +1,29 @@
+{{- $lang := .Language.Lang -}}
+{{- $backUrl := cond (eq $lang "zh") "/zh/post/" "/en/post/" -}}
+{{- $backText := cond (eq $lang "zh") "← 返回文章列表" "← Back to Posts" -}}
+{{- $prevText := cond (eq $lang "zh") "上一篇" "Previous" -}}
+{{- $nextText := cond (eq $lang "zh") "下一篇" "Next" -}}
+{{- $prev := .PrevInSection -}}
+{{- $next := .NextInSection -}}
+
+<section class="article-nav">
+  <div class="nav-back-row">
+    <a href="{{ $backUrl }}" class="nav-back-link">{{ $backText }}</a>
+  </div>
+  {{- if or $prev $next }}
+  <div class="nav-row">
+    <div class="nav-item nav-prev">
+      {{- if $prev }}
+      <span class="nav-label">{{ $prevText }}</span>
+      <a href="{{ $prev.RelPermalink }}" class="nav-title">{{ $prev.Title }}</a>
+      {{- end }}
+    </div>
+    <div class="nav-item nav-next">
+      {{- if $next }}
+      <span class="nav-label">{{ $nextText }}</span>
+      <a href="{{ $next.RelPermalink }}" class="nav-title">{{ $next.Title }}</a>
+      {{- end }}
+    </div>
+  </div>
+  {{- end }}
+</section>

@@ -1,0 +1,289 @@
+{{ define "main" }}
+{{- $lang := .Language.Lang -}}
+
+{{/* VideoObject Schema for homepage promo video */}}
+{{ if eq $lang "zh" }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "name": "时序实验室 - QuestDB 实战教程与性能基准",
+  "description": "QuestDB 实战教程、性能基准测试与生产部署指南",
+  "thumbnailUrl": "https://questdblab.org/images/promo-poster-cn.jpg",
+  "contentUrl": "https://questdblab.org/videos/promo_cn.mp4",
+  "uploadDate": "2026-05-01",
+  "duration": "PT1M30S",
+  "inLanguage": "zh-CN"
+}
+</script>
+{{ else }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "name": "Time-Series Lab - QuestDB Tutorials & Benchmarks",
+  "description": "QuestDB tutorials, benchmarks and production deployment guides",
+  "thumbnailUrl": "https://questdblab.org/images/promo-poster.jpg",
+  "contentUrl": "https://questdblab.org/videos/promo_en.mp4",
+  "uploadDate": "2026-05-01",
+  "duration": "PT1M30S",
+  "inLanguage": "en-US"
+}
+</script>
+{{ end }}
+
+{{/* ==================== ZH Content ==================== */}}
+{{- if eq $lang "zh" -}}
+
+<div class="hero-section">
+  <h1 class="hero-title">QuestDB 实战教程、性能基准与生产指南</h1>
+  <p class="hero-subtitle">
+    QuestDB 实战教程 · 性能基准测试 · 生产部署指南<br>
+    可运行的 SQL 与实测数据，面向开发者与数据工程师
+  </p>
+  <div class="hero-cta">
+    <a href="/zh/post/" class="btn btn-primary">📖 浏览全部文章</a>
+    <a href="/zh/about/" class="btn btn-secondary">了解更多 →</a>
+  </div>
+</div>
+
+<div class="stats-bar">
+  <div class="stats-item">
+    <div class="stats-number">{{ len (where .Site.RegularPages "Section" "post") }}+</div>
+    <div class="stats-label">深度教程</div>
+  </div>
+  <div class="stats-item">
+    <div class="stats-number">1000万+</div>
+    <div class="stats-label">每秒写入行数</div>
+  </div>
+  <div class="stats-item">
+    <div class="stats-number">50+</div>
+    <div class="stats-label">基准测试与指南</div>
+  </div>
+</div>
+
+{{/* ==================== About this blog ==================== */}}
+<div class="about-section">
+  <h2>🔍 时序实验室是什么？</h2>
+  <p><strong>时序实验室</strong> 是一个专注于 <strong>QuestDB 时序数据库</strong> 实战的中文技术社区。我们提供从入门到进阶的 QuestDB 教程，覆盖 IoT 传感器数据、金融 tick 数据、可观测性与性能基准测试等场景。所有示例均可实际运行，所有性能结论都附带测试条件。</p>
+  <p>QuestDB 是一个高性能、开源的 <strong>时序数据库</strong>，专为高吞吐摄入与亚毫秒级查询设计，采用分布式列式存储与向量化执行引擎。它特别适合 <strong>时间序列</strong> 场景：传感器/IoT 数据、金融 tick/K线数据、可观测性指标与日志。无论是每秒数百万行的高频写入，还是 TB 级历史数据的时间聚合，QuestDB 都能轻松应对。</p>
+</div>
+
+{{/* ==================== Value Grid ==================== */}}
+<div class="value-grid">
+  <div class="value-card">
+    <span class="icon">📘</span>
+    <h3>实战教程</h3>
+    <p>从零开始学 QuestDB，涵盖 IoT、金融 tick、可观测性等真实时序场景，上手即用</p>
+  </div>
+  <div class="value-card">
+    <span class="icon">⚡</span>
+    <h3>性能基准</h3>
+    <p>QuestDB vs InfluxDB/TimescaleDB/ClickHouse 摄入与查询实测对比，用数据说话</p>
+  </div>
+  <div class="value-card">
+    <span class="icon">🧩</span>
+    <h3>进阶技巧</h3>
+    <p>SAMPLE BY 聚合、ASOF JOIN、SYMBOL 类型与分区策略 —— 深入解析并附可运行 SQL</p>
+  </div>
+  <div class="value-card">
+    <span class="icon">🛠️</span>
+    <h3>最佳实践</h3>
+    <p>生产部署、ILP 高吞吐写入、Grafana 仪表板集成，让 QuestDB 真正在你的项目落地</p>
+  </div>
+</div>
+
+{{/* ==================== Learning Path ==================== */}}
+<div class="monetize-section">
+  <h2>🧭 学习路径</h2>
+  <div class="monetize-grid">
+    <div class="monetize-item">
+      <div class="step">1</div>
+      <h4>入门</h4>
+      <p>安装 QuestDB，通过 ILP 行协议写入第一批时序数据</p>
+    </div>
+    <div class="monetize-item">
+      <div class="step">2</div>
+      <h4>建模</h4>
+      <p>设计时间戳、SYMBOL 维度与 PARTITION BY 分区策略</p>
+    </div>
+    <div class="monetize-item">
+      <div class="step">3</div>
+      <h4>分析</h4>
+      <p>用 SAMPLE BY、ASOF JOIN 与 FIRST/LATEST 做时序聚合与对齐</p>
+    </div>
+    <div class="monetize-item">
+      <div class="step">4</div>
+      <h4>生产</h4>
+      <p>高吞吐 ILP 摄入、Grafana 可视化与分布式部署</p>
+    </div>
+  </div>
+</div>
+
+{{/* ==================== Featured Articles ==================== */}}
+<h2 class="section-title">🔥 热门推荐</h2>
+<section class="article-list">
+  {{- range first 8 (where .Site.RegularPages "Section" "post") -}}
+    {{ partial "article-list/default" . }}
+  {{- end -}}
+</section>
+
+{{/* ==================== QuestDB FAQ ==================== */}}
+<div class="faq-section">
+  <h2>❓ QuestDB 常见问题</h2>
+  <div class="faq-item">
+    <h3>QuestDB 适合什么场景？</h3>
+    <p>QuestDB 最适合<strong>时间序列</strong>场景：IoT 传感器数据、金融 tick/K线数据、可观测性指标与日志。它擅长高吞吐写入与亚毫秒级聚合查询，不适合一般事务处理（OLTP）或频繁更新的低延迟点查，那是 PostgreSQL 的领域。</p>
+  </div>
+  <div class="faq-item">
+    <h3>QuestDB 和 InfluxDB 哪个更好？</h3>
+    <p>两者都面向时序，但侧重点不同。QuestDB 在<strong>高并发摄入 + 低延迟分析查询</strong>上通常更强，且原生支持标准 SQL 与 Grafana；InfluxDB 在<strong>云生态与托管服务</strong>上更成熟。选型应取决于你的写入速率、查询延迟要求与运维成本。</p>
+  </div>
+  <div class="faq-item">
+    <h3>QuestDB 能替代 ClickHouse 吗？</h3>
+    <p>部分场景可以。QuestDB 专为时序设计，<strong>写入吞吐和时间聚合</strong>通常更快且更易用；ClickHouse 在<strong>通用 OLAP 与复杂多维分析</strong>上更灵活。如果你的数据以时间序列为主，QuestDB 往往是更省心的选择。</p>
+  </div>
+  <div class="faq-item">
+    <h3>QuestDB 能处理多大数据量？</h3>
+    <p>单机即可支持<strong>每秒数百万行</strong>的高吞吐写入，配合 <strong>PARTITION BY DAY/MONTH</strong> 分区与压缩，可高效管理 TB 级历史数据。需要更大规模时，可使用 QuestDB 的分布式模式横向扩展。</p>
+  </div>
+</div>
+
+{{/* ==================== Newsletter ==================== */}}
+<div class="newsletter-cta">
+  <h2>📬 订阅更新</h2>
+  <p>每篇文章都是基于实战的干货，不灌水、不废话。订阅后第一时间收到最新内容。</p>
+  <a href="mailto:admin@questdblab.org?subject=订阅 时序实验室" class="btn">📧 订阅 Updates</a>
+</div>
+
+{{- else -}}
+
+{{/* ==================== EN Content ==================== */}}
+
+<div class="hero-section">
+  <h1 class="hero-title">QuestDB Tutorials, Benchmarks & Production Guides</h1>
+  <p class="hero-subtitle">
+    QuestDB tutorials · Performance benchmarks · Production deployment guides<br>
+    Code-first articles with runnable SQL and measured results
+  </p>
+  <div class="hero-cta">
+    <a href="/en/post/" class="btn btn-primary">📖 Browse All Posts</a>
+    <a href="/en/about/" class="btn btn-secondary">Learn More →</a>
+  </div>
+</div>
+
+<div class="stats-bar">
+  <div class="stats-item">
+    <div class="stats-number">{{ len (where .Site.RegularPages "Section" "post") }}+</div>
+    <div class="stats-label">Deep Tutorials</div>
+  </div>
+  <div class="stats-item">
+    <div class="stats-number">1000万+</div>
+    <div class="stats-label">Data Processed</div>
+  </div>
+  <div class="stats-item">
+    <div class="stats-number">50+</div>
+    <div class="stats-label">Benchmarks & Guides</div>
+  </div>
+</div>
+
+{{/* ==================== About ==================== */}}
+<div class="about-section">
+  <h2>🔍 What is Time-Series Lab?</h2>
+  <p><strong>Time-Series Lab</strong> is an independent technical community focused on <strong>QuestDB</strong> — a high-performance, open-source <strong>time-series database</strong>. We provide hands-on tutorials covering IoT sensor data, financial tick data, observability, and performance benchmarks. Every example is runnable, and every performance claim comes with its test conditions.</p>
+  <p>QuestDB is designed for high-throughput ingestion and sub-millisecond analytical queries, using a distributed columnar storage engine. It's ideal for time-series workloads: sensors/IoT, financial tick/OHLC, and observability metrics. Whether you're writing millions of rows per second or aggregating terabytes of historical data, QuestDB handles it with ease.</p>
+</div>
+
+<div class="value-grid">
+  <div class="value-card">
+    <span class="icon">📘</span>
+    <h3>Tutorials</h3>
+    <p>Learn QuestDB from scratch — IoT, financial tick, and observability with real-world scenarios</p>
+  </div>
+  <div class="value-card">
+    <span class="icon">⚡</span>
+    <h3>Benchmarks</h3>
+    <p>QuestDB vs InfluxDB/TimescaleDB/ClickHouse — data-driven comparisons for tool selection</p>
+  </div>
+  <div class="value-card">
+    <span class="icon">🧩</span>
+    <h3>Advanced Techniques</h3>
+    <p>SAMPLE BY aggregation, ASOF JOIN, SYMBOL types, and partitioning strategies — deep dives with runnable SQL</p>
+  </div>
+  <div class="value-card">
+    <span class="icon">🛠️</span>
+    <h3>Best Practices</h3>
+    <p>Production deployment, high-throughput ILP ingestion, Grafana dashboard integration — make QuestDB work for you</p>
+  </div>
+</div>
+
+<div class="monetize-section">
+  <h2>🧭 Learning Path</h2>
+  <div class="monetize-grid">
+    <div class="monetize-item">
+      <div class="step">1</div>
+      <h4>Basics</h4>
+      <p>Install QuestDB and write your first time-series data via the ILP line protocol</p>
+    </div>
+    <div class="monetize-item">
+      <div class="step">2</div>
+      <h4>Model</h4>
+      <p>Design timestamps, SYMBOL dimensions, and PARTITION BY partitioning strategies</p>
+    </div>
+    <div class="monetize-item">
+      <div class="step">3</div>
+      <h4>Analyze</h4>
+      <p>Use SAMPLE BY, ASOF JOIN, and FIRST/LATEST for time-series aggregation and alignment</p>
+    </div>
+    <div class="monetize-item">
+      <div class="step">4</div>
+      <h4>Production</h4>
+      <p>High-throughput ILP ingestion, Grafana visualization, and distributed deployment</p>
+    </div>
+  </div>
+</div>
+
+{{/* ==================== Featured Articles ==================== */}}
+<h2 class="section-title">🔥 Featured Posts</h2>
+<section class="article-list">
+  {{- range first 8 (where .Site.RegularPages "Section" "post") -}}
+    {{ partial "article-list/default" . }}
+  {{- end -}}
+</section>
+
+{{/* ==================== QuestDB FAQ ==================== */}}
+<div class="faq-section">
+  <h2>❓ QuestDB FAQ</h2>
+  <div class="faq-item">
+    <h3>What is QuestDB best for?</h3>
+    <p><strong>Time-series workloads</strong> — IoT sensor data, financial tick/OHLC data, observability metrics, and logs. It excels at high-throughput ingestion and sub-millisecond analytical queries, but is not designed for general OLTP (high-concurrency transactions) or frequent low-latency point updates — that's PostgreSQL territory.</p>
+  </div>
+  <div class="faq-item">
+    <h3>QuestDB vs InfluxDB: which is better?</h3>
+    <p>Both target time-series, but with different emphases. QuestDB is typically stronger in <strong>high-concurrency ingestion + low-latency analytical queries</strong>, with native standard SQL and Grafana support; InfluxDB has a more mature <strong>cloud ecosystem and managed services</strong>. Choose based on your write rate, query latency requirements, and ops cost.</p>
+  </div>
+  <div class="faq-item">
+    <h3>Does QuestDB replace ClickHouse?</h3>
+    <p>In some scenarios, yes. QuestDB is purpose-built for time-series, with <strong>faster write throughput and time aggregation</strong> that's easier to use; ClickHouse is more flexible for <strong>general OLAP and complex multi-dimensional analytics</strong>. If your data is primarily time-series, QuestDB is often the more convenient choice.</p>
+  </div>
+  <div class="faq-item">
+    <h3>How much data can QuestDB handle?</h3>
+    <p>A single node supports <strong>millions of rows per second</strong> of high-throughput writes. With <strong>PARTITION BY DAY/MONTH</strong> partitioning and compression, it efficiently manages TB-scale historical data. For larger scale, use QuestDB's distributed mode to scale horizontally.</p>
+  </div>
+</div>
+
+<div class="newsletter-cta">
+  <h2>📬 Stay Updated</h2>
+  <p>Every article is battle-tested — no fluff, no filler. Subscribe to get the latest straight to your inbox.</p>
+  <a href="mailto:admin@questdblab.org?subject=Subscribe Time-Series Lab" class="btn">📧 Subscribe</a>
+</div>
+
+{{- end -}}
+
+{{- partial "pagination.html" . -}}
+{{- partial "footer/footer" . -}}
+{{ end }}
+
+{{ define "right-sidebar" }}
+    {{ partial "sidebar/right.html" (dict "Context" . "Scope" "homepage") }}
+{{ end }}

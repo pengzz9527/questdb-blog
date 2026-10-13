@@ -1,0 +1,61 @@
+{{- /* Enhanced JSON-LD Structured Data for QuestDBLab */ -}}
+{{- if .IsPage -}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": {{ partial "data/title" . | jsonify }},
+  "description": {{ partial "data/description" . | jsonify }},
+  "datePublished": "{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}",
+  "dateModified": "{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}",
+  "author": {
+    "@type": "Person",
+    "name": "Ross Zhang",
+    "url": "https://github.com/pengzz9527",
+    "sameAs": [
+      "https://github.com/pengzz9527",
+      "https://twitter.com/pengzz9527",
+      "https://youtube.com/@questdblab"
+    ]
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Time-Series Lab",
+    "url": "{{ .Site.BaseURL }}",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "{{ .Site.BaseURL }}images/logo.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{ .Permalink }}"
+  },
+  "image": "{{ .Site.BaseURL }}og-default-v2.jpg",
+  "articleSection": {{ .Section | title | jsonify }},
+  "keywords": {{ with .Params.Tags }}{{ . | jsonify }}{{ else }}[]{{ end }}
+}
+</script>
+{{- else -}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Time-Series Lab",
+  "url": "https://questdblab.org/",
+  "description": "{{ if eq .Language.Lang "zh" }}QuestDB 中文技术社区：实战教程、性能基准、生产部署经验。独立社区项目，不代表 QuestDB 官方。{{ else }}Independent QuestDB time-series database blog: tutorials, benchmarks, and production deployment guides. Not affiliated with QuestDB official project.{{ end }}",
+  "inLanguage": "{{ .Language.Lang }}",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://questdblab.org/{{ .Language.Lang }}/search/?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+{{- end -}}
+
+<!-- AdSense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5004407977035136" crossorigin="anonymous"></script>
+
+<!-- Umami Analytics -->
+<script defer src="https://umami.questdblab.org/script.js" data-website-id="ff3cdf0a-cfc8-4e14-bf8f-ebc64338be4a"></script>

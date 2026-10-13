@@ -1,0 +1,4 @@
+# Google Search Console 验证文件
+# 请将以下内容替换为 GSC 给你的实际验证字符串
+# 然后放到 /static/google-site-verification.html
+# 最后 git push 触发 Vercel 部署

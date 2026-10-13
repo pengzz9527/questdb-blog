@@ -1,0 +1,11 @@
+.hugo_build.lock
+public/
+resources/
+node_modules/
+.DS_Store
+*.swp
+
+# DuckDB 数据库文件
+*.duckdb
+.duckdb
+

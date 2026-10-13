@@ -1,0 +1,23 @@
+User-agent: Mediapartners-Google
+Allow: /
+Allow: /ads.txt
+
+User-agent: *
+Allow: /
+Allow: /ads.txt
+Disallow: /admin/
+Disallow: /tmp/
+Disallow: /zh/search/
+Disallow: /en/search/
+
+# 低价值内容，AdSense 审核期不让 AdSense 看，但让 Googlebot 看
+User-agent: Mediapartners-Google
+Disallow: /_emergency-cta/
+Disallow: /zh/post/_emergency-cta/
+Disallow: /en/post/_emergency-cta/
+Disallow: /zh/post/questdb-daily-2026-
+Disallow: /en/post/questdb-daily-2026-
+Disallow: /zh/post/hermes-disk-crisis/
+Disallow: /en/post/hermes-disk-crisis/
+
+Sitemap: https://questdblab.org/en/sitemap.xml

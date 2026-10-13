@@ -1,0 +1,65 @@
+<meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+
+{{- $description := partialCached "data/description" . .RelPermalink -}}
+<meta name='description' {{ printf "content=%q" $description | safeHTMLAttr }}>
+{{ with .Params.Keywords }}<meta name="keywords" content="{{ delimit . ", " }}">{{ end }}
+
+{{- $title := partial "data/title" . -}}
+<title>{{ $title }}</title>
+
+{{ with .Params.canonicalUrl }}
+<link rel="canonical" href="{{ . }}">
+{{ else }}
+<link rel="canonical" href="{{ .Permalink }}">
+{{ end }}
+
+{{- partial "head/custom-font.html" . -}}
+{{- partial "head/style.html" . -}}
+{{- partial "head/script.html" . -}}
+{{- partial "head/opengraph/include.html" . -}}
+
+{{- range .AlternativeOutputFormats -}}
+    <link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .Permalink | safeURL }}">
+{{- end -}}
+
+{{- $favicon := partial "helper/image" (dict "Image" .Site.Params.favicon "Resources" resources "Context" .) -}}
+{{ with $favicon }}
+    <link rel="shortcut icon" href="{{ .Permalink }}" />
+{{ end }}
+
+{{- if .Site.Params.cookies.enabled -}}
+    {{- partial "cookies/analytics.html" . -}}
+{{- else -}}
+    {{- template "_internal/google_analytics.html" . -}}
+{{- end -}}
+
+{{- partial "head/custom.html" . -}}
+
+<!-- Noindex paginated pages beyond page 1 -->
+{{- if and (ne .Kind "page") (ne .Kind "404") -}}
+{{- if gt .Paginator.PageNumber 1 -}}
+<meta name="robots" content="noindex,follow">
+{{- end -}}
+{{- end -}}
+
+<!-- Noindex from frontmatter robots field (e.g. robots: noindex -> "noindex,follow") -->
+{{- with .Params.robots -}}
+<meta name="robots" content="{{ . }},follow">
+{{- end -}}
+
+<!-- Hreflang for en/zh multilingual articles (self + all peers + x-default) -->
+{{- if and (eq .Kind "page") .AllTranslations -}}
+  {{- range $alt := .AllTranslations }}
+<link rel="alternate" hreflang="{{ $alt.Lang }}" href="{{ $alt.Permalink }}">
+  {{- end }}
+<link rel="alternate" hreflang="x-default" href="{{ .Permalink }}">
+{{- end }}
+
+<!-- Noindex low-value pages (CTA, daily auto-posts, off-topic) -->
+{{- if or (hasPrefix .RelPermalink "/zh/post/_emergency-cta/") (hasPrefix .RelPermalink "/en/post/_emergency-cta/") (hasPrefix .RelPermalink "/zh/post/questdb-daily-20") (hasPrefix .RelPermalink "/en/post/questdb-daily-20") (hasPrefix .RelPermalink "/zh/post/hermes-disk-crisis/") (hasPrefix .RelPermalink "/en/post/hermes-disk-crisis/") -}}
+<meta name="robots" content="noindex,follow">
+{{- end -}}
+
+<!-- Google Search Console 验证 -->
+<meta name="google-site-verification" content="vo4QTMHYGGAN4WdzAIUvKgx1yMPGt_RkKIgKuG5a3dk" />
