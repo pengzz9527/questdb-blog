@@ -165,6 +165,12 @@ ILP 行格式错。99% 是 **timestamp 单位写错**——QuestDB 要 **纳秒*
 **Q4：生产上用什么端口组合？**
 对外只暴露 **9009（写入）** + **8812（JDBC 查询）**；**8880 只绑 127.0.0.1**，别上公网。
 
+**Q5：QuestDB 镜像拉不下来或启动慢？**
+国内网络拉 `questdb/questdb:latest` 可能卡住。两个解法：(a) 配置 Docker 镜像加速器（阿里云/腾讯云都有官方加速器）；(b) 用 `docker pull questdb/questdb:latest` 前先 `docker system prune` 清缓存，再重新拉。镜像本身约 150MB，拉完本地缓存后 `docker run` 秒起。
+
+**Q6：数据持久化在哪里？**
+容器内数据默认存 `/root/.questdb`，不挂 `-v` 卷重启就丢。上面 `docker run` 已挂 `$(pwd)/questdb_data` 到该路径，重启容器数据保留。生产环境建议把数据目录挂到独立磁盘，避免与系统盘争 IO。
+
 ## 八、下一步
 
 到这里你已经：
