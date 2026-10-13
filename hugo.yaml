@@ -8,6 +8,11 @@ paginate: 30
 enableEmoji: true
 hasCJKLanguage: true
 
+# 禁用 taxonomy/term 空页（/tags/ /categories/ 等低质量聚合页，AdSense 审核避雷）
+disableKinds:
+  - taxonomy
+  - term
+
 languages:
   zh:
     contentDir: "content/zh"
@@ -165,7 +170,7 @@ params:
   author: "Ross Zhang"
   images:
     - social-card.png
-  favicon: "/images/favicon.ico"
+  favicon: "/images/favicon.png"
   cookies:
     enabled: false
   ImageProcessing:
