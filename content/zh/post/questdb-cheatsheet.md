@@ -216,3 +216,14 @@ SELECT * FROM partitions WHERE table_id = (SELECT id FROM tables WHERE name='cpu
 ---
 
 *本速查表基于 QuestDB `latest` 实测。`DROP_PARTITION` 日期格式和 `INDEX N` 上限随版本演进，上线前用 `SELECT * FROM functions` 核对你在用的版本支持的写法。QuestDB 为其权利人商标，本站为独立技术社区，非官方。*
+
+## 参考
+
+- [QuestDB 官方文档：CREATE TABLE](https://questdb.io/docs/reference/sql/create-table/)
+- [QuestDB 官方文档：INSERT / Line Protocol](https://questdb.io/docs/reference/sql/insert/)
+
+## 相关文章
+
+- [QuestDB 安装与快速上手：从 Docker 到 ILP 写入的第一行时序数据（2026 版）](/zh/post/questdb-install-guide/)
+- [QuestDB SAMPLE BY 完全指南：时序数据的灵魂聚合语法](/zh/post/questdb-sample-by-complete-guide/)
+- [QuestDB ILP 行协议摄入完全指南：从单行写入到高吞吐批量](/zh/post/questdb-ilp-ingestion-guide/)

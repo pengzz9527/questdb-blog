@@ -160,3 +160,14 @@ WINDOW w AS (PARTITION BY host ORDER BY ts ROWS 60 PRECEDING);
 ## 6. Next
 
 The previous post covered retention and hot/cold tiering; this one puts the data inside the retention window to work. A natural next step: write Z-score results back into an `anomaly` table, then use `SAMPLE BY` for an hourly anomaly-count panel — completing the detect → alert → review loop.
+
+## References
+
+- [QuestDB docs: SELECT](https://questdb.io/docs/reference/sql/select/)
+- [Python statistics stdlib docs](https://docs.python.org/3/library/statistics.html)
+
+## Related reading
+
+- [QuestDB + Kafka Real-Time Pipeline: ILP Ingestion to SAMPLE BY Rollups](/en/post/questdb-kafka-connect-pipeline/)
+- [QuestDB SAMPLE BY Complete Guide: The Soul of Time-Series Aggregation](/en/post/questdb-sample-by-complete-guide/)
+- [QuestDB Crypto Trading Anomaly Detection: Real-Time Tick Alerts in Practice](/en/post/questdb-crypto-trading-anomaly-detection/)

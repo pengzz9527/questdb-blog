@@ -166,3 +166,14 @@ ORDER BY fill.ts;
 ---
 
 *本文 SQL 在 QuestDB `latest` 实测通过。QuestDB 为其权利人商标，本站为独立技术社区，非官方。*
+
+## 参考
+
+- [QuestDB 官方文档：ASOF JOIN](https://questdb.io/docs/reference/sql/asof-join/)
+- [QuestDB 官方文档：SELECT](https://questdb.io/docs/reference/sql/select/)
+
+## 相关文章
+
+- [QuestDB SAMPLE BY 完全指南：时序数据的灵魂聚合语法](/zh/post/questdb-sample-by-complete-guide/)
+- [金融 tick 数据生成 K 线：QuestDB SAMPLE BY 计算 OHLCV](/zh/post/questdb-tick-to-ohlcv-kline/)
+- [QuestDB SYMBOL 类型 vs VARCHAR：性能基准测试与选型建议](/zh/post/questdb-symbol-type-vs-varchar-benchmark/)

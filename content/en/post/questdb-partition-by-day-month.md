@@ -132,3 +132,13 @@ Next up: **Zero-Cost Self-Hosted: QuestDB + Grafana IoT Dashboard** — wire you
 ---
 
 *SQL verified on QuestDB `latest`. Partition file naming and `i_partitions` may vary slightly by version. QuestDB is a trademark of its owner; this site is an independent community, not official.*
+
+## References
+
+- [QuestDB docs: CREATE TABLE](https://questdb.io/docs/reference/sql/create-table/)
+- [QuestDB docs: SHOW](https://questdb.io/docs/reference/sql/show/)
+
+## Related reading
+
+- [QuestDB Data Retention: DROP PARTITION, TTL, and Hot/Cold Tiering](/en/post/questdb-data-retention-lifecycle/)
+- [QuestDB Time-Series Compression & Retention: PARTITION BY Auto-Purge and Hot-Cold Tiering](/en/post/questdb-timeseries-compression-retention/)

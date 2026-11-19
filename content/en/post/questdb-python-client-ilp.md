@@ -139,3 +139,14 @@ And use **event time** for timestamps, not arrival time: a gateway clock driftin
 - Write concurrency and memory knobs → our ILP high-concurrency tuning article.
 - Batch consumption from message queues → our QuestDB + Kafka pipeline article.
 - Candles from backtest data → our tick-to-K-line article.
+
+## References
+
+- [QuestDB Python client (PyPI)](https://pypi.org/project/questdb/)
+- [QuestDB docs: INSERT / Line Protocol](https://questdb.io/docs/reference/sql/insert/)
+
+## Related reading
+
+- [QuestDB ILP Ingestion Complete Guide: From Single Rows to High-Throughput Batch](/en/post/questdb-ilp-ingestion-guide/)
+- [Power Load Curve Analysis: QuestDB Metering Data and Peak Demand](/en/post/questdb-power-load-analysis/)
+- [QuestDB ILP High-Concurrency Write Tuning: Workers, Batching & Memory Benchmarks](/en/post/questdb-ilp-hi-concurrency-tuning/)

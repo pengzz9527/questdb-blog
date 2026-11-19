@@ -181,3 +181,14 @@ FROM l2 LIMIT 1;
 ---
 
 *本文 SQL 在 QuestDB `latest` + Docker 本地环境验证。`QUALIFY` / `LAG` / `STDEV` 窗口函数支持版本 ≥ 8.0。QuestDB 为其权利人商标，本站为独立技术社区，非官方。*
+
+## 参考
+
+- [QuestDB 官方文档：SELECT](https://questdb.io/docs/reference/sql/select/)
+- [Python statistics 标准库文档](https://docs.python.org/3/library/statistics.html)
+
+## 相关文章
+
+- [QuestDB 异常检测实战：滚动 Z-score 与金融 tick 去重回测](/zh/post/questdb-anomaly-detection-zscore/)
+- [金融 tick 数据生成 K 线：QuestDB SAMPLE BY 计算 OHLCV](/zh/post/questdb-tick-to-ohlcv-kline/)
+- [QuestDB SAMPLE BY 完全指南：时序数据的灵魂聚合语法](/zh/post/questdb-sample-by-complete-guide/)

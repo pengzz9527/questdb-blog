@@ -244,3 +244,13 @@ COPY (
 ---
 
 *本文 SQL 与脚本在 QuestDB latest（Docker）+ Linux 环境验证。`partitions()` 函数需 QuestDB ≥ 6.6，`COPY ... WITH FORMAT PARQUET` 需 ≥ 7.0，WAL 异步删分区需 ≥ 7.3。企业版 TTL 语法与开源版不同，以官方文档为准。QuestDB 为其权利人商标，本站为独立技术社区，非官方。*
+
+## 参考
+
+- [QuestDB 官方文档：CREATE TABLE](https://questdb.io/docs/reference/sql/create-table/)
+- [QuestDB 官方文档：SHOW](https://questdb.io/docs/reference/sql/show/)
+
+## 相关文章
+
+- [QuestDB 时序数据压缩与保留策略：PARTITION BY 自动删除 + 冷热分层](/zh/post/questdb-timeseries-compression-retention/)
+- [QuestDB PARTITION BY DAY / MONTH 分区策略：存储与查询权衡](/zh/post/questdb-partition-by-day-month/)

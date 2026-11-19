@@ -179,3 +179,14 @@ SAMPLE BY 跑在列式存储 + 分区裁剪上：WHERE 时间过滤只扫对应�
 - **出图**：K 线表进 Grafana candlestick 面板，接 Grafana 与 QuestDB 数据源全流程见本站《零成本自建 IoT 仪表板》一文。
 - **回测**：读 1m K 线 + ASOF JOIN 对齐，策略信号在回测引擎里算。
 - **异动**：对 1m K 线的 close 做滚动 Z-score，写法见本站异常检测一文。
+
+## 参考
+
+- [QuestDB 官方文档：SAMPLE BY](https://questdb.io/docs/reference/sql/sample-by/)
+- [QuestDB 官方文档：ASOF JOIN](https://questdb.io/docs/reference/sql/asof-join/)
+
+## 相关文章
+
+- [QuestDB SAMPLE BY 完全指南：时序数据的灵魂聚合语法](/zh/post/questdb-sample-by-complete-guide/)
+- [QuestDB 加密交易异常检测：tick 数据实时告警实战](/zh/post/questdb-crypto-trading-anomaly-detection/)
+- [QuestDB 异常检测实战：滚动 Z-score 与金融 tick 去重回测](/zh/post/questdb-anomaly-detection-zscore/)

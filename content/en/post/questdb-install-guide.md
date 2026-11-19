@@ -179,3 +179,13 @@ Next up: **QuestDB vs DuckDB vs TimescaleDB** — a high-volume search term that
 ---
 
 *Based on QuestDB official docs (questdb.io/docs) and Oct 2026 verified commands. QuestDB is a trademark of its respective owners; this site is an independent technical community, not the official project.*
+
+## References
+
+- [QuestDB GitHub repository](https://github.com/questdb/questdb)
+- [QuestDB docs: CREATE TABLE](https://questdb.io/docs/reference/sql/create-table/)
+
+## Related reading
+
+- [QuestDB SQL Cheatsheet: SAMPLE BY, ASOF JOIN, SYMBOL & Partitioning in One Page](/en/post/questdb-cheatsheet/)
+- [QuestDB ILP Ingestion Complete Guide: From Single Rows to High-Throughput Batch](/en/post/questdb-ilp-ingestion-guide/)

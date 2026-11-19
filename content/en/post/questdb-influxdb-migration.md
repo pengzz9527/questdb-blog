@@ -298,3 +298,13 @@ Put that in cron, or reuse the script from the data retention post.
 ---
 
 *SQL verified against QuestDB latest (Docker). `approx_percentile` requires QuestDB ≥ 6.1; `ALTER TABLE ... DEDUP` requires ≥ 7.3. InfluxDB syntax follows 1.8 and 2.x InfluxQL; Flux requires manual semantic rewriting. QuestDB is a trademark of its owner; this site is an independent technical community, not affiliated with QuestDB.*
+
+## References
+
+- [InfluxData](https://www.influxdata.com/)
+- [QuestDB docs: INSERT / Line Protocol](https://questdb.io/docs/reference/sql/insert/)
+
+## Related reading
+
+- [QuestDB ASOF JOIN Complete Guide: Aligning Time-Series Data Correctly](/en/post/questdb-asof-join-guide/)
+- [QuestDB ILP Ingestion Complete Guide: From Single Rows to High-Throughput Batch](/en/post/questdb-ilp-ingestion-guide/)

@@ -125,3 +125,13 @@ Don't pick by "which is fastest" alone — pick by **"what your data looks like,
 ---
 
 *Test env: 4C8G / Docker / 2026-10. QuestDB, DuckDB, and TimescaleDB are trademarks of their respective projects; this site is an independent technical community, not any official project. Full benchmark methodology in the upcoming "QuestDB Performance Benchmarks" post.*
+
+## References
+
+- [DuckDB](https://duckdb.org/)
+- [TimescaleDB](https://www.timescaledb.com/)
+
+## Related reading
+
+- [QuestDB vs DuckDB: Both Are 'Fast and Light' — Why Time-Series Belongs in QuestDB](/en/post/questdb-vs-duckdb-chinese/)
+- [QuestDB SAMPLE BY Complete Guide: The Soul of Time-Series Aggregation](/en/post/questdb-sample-by-complete-guide/)

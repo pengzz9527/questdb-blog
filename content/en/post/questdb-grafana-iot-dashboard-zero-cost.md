@@ -196,3 +196,14 @@ Bottom line: this stack's performance ceiling vastly exceeds the needs of a "sma
 ---
 
 *Verified on QuestDB `latest` + Grafana 11 + Docker Compose. The default admin/quest credentials are for local demo only. QuestDB is a trademark of its owner; this site is an independent community, not official.*
+
+## References
+
+- [Grafana docs](https://grafana.com/docs/grafana/latest/)
+- [QuestDB GitHub repository](https://github.com/questdb/questdb)
+
+## Related reading
+
+- [Kubernetes Metrics Pipeline: Prometheus Writing Directly to QuestDB with Grafana](/en/post/questdb-k8s-metrics-collection/)
+- [QuestDB ILP High-Concurrency Write Tuning: Workers, Batching & Memory Benchmarks](/en/post/questdb-ilp-hi-concurrency-tuning/)
+- [QuestDB + Kafka Real-Time Pipeline: ILP Ingestion to SAMPLE BY Rollups](/en/post/questdb-kafka-connect-pipeline/)

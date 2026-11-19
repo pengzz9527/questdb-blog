@@ -98,3 +98,13 @@ COPY (
 ## 六、下一步
 
 下一篇讲 QuestDB 的异常检测实战——把"老数据归档后还能不能被查"和实时告警连起来，用滚动 Z-score 在保留期内发现尖峰。
+
+## 参考
+
+- [QuestDB 官方文档：CREATE TABLE](https://questdb.io/docs/reference/sql/create-table/)
+- [QuestDB 官方文档：SHOW](https://questdb.io/docs/reference/sql/show/)
+
+## 相关文章
+
+- [QuestDB 数据保留策略：DROP PARTITION、TTL 与冷热分层](/zh/post/questdb-data-retention-lifecycle/)
+- [QuestDB PARTITION BY DAY / MONTH 分区策略：存储与查询权衡](/zh/post/questdb-partition-by-day-month/)

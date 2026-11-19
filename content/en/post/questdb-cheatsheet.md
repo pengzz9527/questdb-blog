@@ -216,3 +216,14 @@ In production, a daily cron that drops partitions older than 90 days pins disk u
 ---
 
 *This cheatsheet is verified against QuestDB `latest`. `DROP_PARTITION` date formats and `INDEX N` upper bounds evolve with the version — before shipping, check the exact syntax your deployed version supports with `SELECT * FROM functions`. QuestDB is a trademark of its respective owner; this site is an independent technical community, not official.*
+
+## References
+
+- [QuestDB docs: CREATE TABLE](https://questdb.io/docs/reference/sql/create-table/)
+- [QuestDB docs: INSERT / Line Protocol](https://questdb.io/docs/reference/sql/insert/)
+
+## Related reading
+
+- [QuestDB Installation & Quick Start: From Docker to Your First ILP Write (2026)](/en/post/questdb-install-guide/)
+- [QuestDB SAMPLE BY Complete Guide: The Soul of Time-Series Aggregation](/en/post/questdb-sample-by-complete-guide/)
+- [QuestDB ILP Ingestion Complete Guide: From Single Rows to High-Throughput Batch](/en/post/questdb-ilp-ingestion-guide/)

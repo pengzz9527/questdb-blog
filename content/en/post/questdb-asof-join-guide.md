@@ -154,3 +154,14 @@ ORDER BY fill.ts;
 ---
 
 *All SQL verified on QuestDB `latest`. QuestDB is a trademark of its respective owner; this site is an independent technical community, not official.*
+
+## References
+
+- [QuestDB docs: ASOF JOIN](https://questdb.io/docs/reference/sql/asof-join/)
+- [QuestDB docs: SELECT](https://questdb.io/docs/reference/sql/select/)
+
+## Related reading
+
+- [QuestDB SAMPLE BY Complete Guide: The Soul of Time-Series Aggregation](/en/post/questdb-sample-by-complete-guide/)
+- [Building K-lines From Financial Ticks: QuestDB SAMPLE BY Computes OHLCV](/en/post/questdb-tick-to-ohlcv-kline/)
+- [QuestDB SYMBOL vs VARCHAR: Performance Benchmark & Selection Guide](/en/post/questdb-symbol-type-vs-varchar-benchmark/)

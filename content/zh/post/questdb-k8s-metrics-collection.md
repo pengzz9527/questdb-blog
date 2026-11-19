@@ -159,3 +159,14 @@ Grafana 面板里时间列直接绑 `timestamp`，rx/tx 两条曲线画一张图
 ## 下一步
 
 单节点撑住一个月后，把 QuestDB 升到多节点模式（3 副本 + 对象存储冷备），指标保留拉到 2 年；容量分析用 SQL 聚合出月报，比如"每个 namespace 的 P95 内存"，不用再去翻 Prometheus 的 `topk`。
+
+## 参考
+
+- [Grafana 官方文档](https://grafana.com/docs/grafana/latest/)
+- [QuestDB GitHub 仓库](https://github.com/questdb/questdb)
+
+## 相关文章
+
+- [Prometheus 指标直写 QuestDB：零中间件采集链路实操](/zh/post/questdb-prometheus-direct-write/)
+- [零成本自建：QuestDB + Grafana 构建 IoT 传感器仪表板](/zh/post/questdb-grafana-iot-dashboard-zero-cost/)
+- [QuestDB + Kafka 实时管道：从 ILP 写入到 SAMPLE BY 聚合](/zh/post/questdb-kafka-connect-pipeline/)

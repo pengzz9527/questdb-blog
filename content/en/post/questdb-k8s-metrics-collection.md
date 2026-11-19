@@ -158,3 +158,14 @@ In Grafana, bind the time axis directly to `timestamp`; plot rx/tx on the same l
 ## Next Steps
 
 After single-node holds steady for a month, upgrade QuestDB to multi-node mode (3 replicas + object-storage cold backup) and extend retention to 2 years. Capacity analysis becomes SQL aggregation into monthly reports — e.g. "P95 memory per namespace" — no more digging through Prometheus `topk`.
+
+## References
+
+- [Grafana docs](https://grafana.com/docs/grafana/latest/)
+- [QuestDB GitHub repository](https://github.com/questdb/questdb)
+
+## Related reading
+
+- [Write Prometheus Metrics Directly to QuestDB: A Zero-Overhead Ingestion Pipeline](/en/post/questdb-prometheus-direct-write/)
+- [Zero-Cost Self-Hosted: QuestDB + Grafana IoT Sensor Dashboard](/en/post/questdb-grafana-iot-dashboard-zero-cost/)
+- [QuestDB + Kafka Real-Time Pipeline: ILP Ingestion to SAMPLE BY Rollups](/en/post/questdb-kafka-connect-pipeline/)

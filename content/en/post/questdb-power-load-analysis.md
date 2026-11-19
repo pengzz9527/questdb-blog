@@ -157,3 +157,14 @@ Anything older than two years is rolled down to hourly granularity into `meter_1
 - Load curve + coincident peak in Grafana: our zero-cost IoT dashboard article covers wiring the data source and panels.
 - Rolling Z-score on the hourly curve to catch load spikes: our anomaly detection article.
 - Write concurrency at thousands of meters: our ILP high-concurrency tuning article.
+
+## References
+
+- [QuestDB docs: SAMPLE BY](https://questdb.io/docs/reference/sql/sample-by/)
+- [QuestDB docs: INSERT / Line Protocol](https://questdb.io/docs/reference/sql/insert/)
+
+## Related reading
+
+- [QuestDB SAMPLE BY Complete Guide: The Soul of Time-Series Aggregation](/en/post/questdb-sample-by-complete-guide/)
+- [QuestDB ILP Ingestion Complete Guide: From Single Rows to High-Throughput Batch](/en/post/questdb-ilp-ingestion-guide/)
+- [QuestDB + Kafka Real-Time Pipeline: ILP Ingestion to SAMPLE BY Rollups](/en/post/questdb-kafka-connect-pipeline/)

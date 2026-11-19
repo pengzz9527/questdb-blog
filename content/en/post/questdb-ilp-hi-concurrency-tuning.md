@@ -131,3 +131,13 @@ When write rate persistently exceeds on-disk capability, QuestDB blocks the inge
 - Failure handling: batch rejection must be retryable, never silent.
 
 Next up: what to do with data after it hits disk — `PARTITION BY` auto-retention and hot/cold tiering, which is where write tuning naturally leads.
+
+## References
+
+- [QuestDB docs: INSERT / Line Protocol](https://questdb.io/docs/reference/sql/insert/)
+- [QuestDB GitHub repository](https://github.com/questdb/questdb)
+
+## Related reading
+
+- [QuestDB ILP Ingestion Complete Guide: From Single Rows to High-Throughput Batch](/en/post/questdb-ilp-ingestion-guide/)
+- [QuestDB Python Client in Practice: Fast ILP Writes and pandas Ingestion](/en/post/questdb-python-client-ilp/)

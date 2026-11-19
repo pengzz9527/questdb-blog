@@ -131,3 +131,13 @@ def post_batch(rows: list[str]):
 - 失败处理：整批拒绝要能重试，别静默丢点。
 
 下一篇会讲数据落了盘之后怎么删——`PARTITION BY` 自动保留与冷热分层，正好接上。
+
+## 参考
+
+- [QuestDB 官方文档：INSERT / Line Protocol](https://questdb.io/docs/reference/sql/insert/)
+- [QuestDB GitHub 仓库](https://github.com/questdb/questdb)
+
+## 相关文章
+
+- [QuestDB ILP 行协议摄入完全指南：从单行写入到高吞吐批量](/zh/post/questdb-ilp-ingestion-guide/)
+- [QuestDB Python 客户端实战：ILP 高速写入与 pandas 数据接入](/zh/post/questdb-python-client-ilp/)

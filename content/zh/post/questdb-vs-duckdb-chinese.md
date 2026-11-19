@@ -120,3 +120,13 @@ QuestDB 的设计目标就是**秒级高速流**，DuckDB 这条赛道基本不�
 *实测环境：4C8G / Docker / 2026-10。QuestDB、DuckDB 均为各自项目的商标；本站为独立技术社区，非任何官方项目。*
 
 > 如果你的场景介于"实时流"和"文件分析"之间，欢迎留言描述你的数据怎么进来、谁来查，我帮你判断该用哪个。
+
+## 参考
+
+- [DuckDB 官网](https://duckdb.org/)
+- [TimescaleDB 官网](https://www.timescaledb.com/)
+
+## 相关文章
+
+- [QuestDB vs DuckDB vs TimescaleDB：时序数据库选型深度对比（附实测数据）](/zh/post/questdb-vs-duckdb-vs-timescaledb/)
+- [QuestDB 安装与快速上手：从 Docker 到 ILP 写入的第一行时序数据（2026 版）](/zh/post/questdb-install-guide/)

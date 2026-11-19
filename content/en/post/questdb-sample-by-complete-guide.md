@@ -157,3 +157,14 @@ SAMPLE BY 5m;
 ---
 
 *All SQL verified on QuestDB `latest`. QuestDB is a trademark of its respective owner; this site is an independent technical community.*
+
+## References
+
+- [QuestDB docs: SAMPLE BY](https://questdb.io/docs/reference/sql/sample-by/)
+- [QuestDB docs: SELECT](https://questdb.io/docs/reference/sql/select/)
+
+## Related reading
+
+- [QuestDB ASOF JOIN Complete Guide: Aligning Time-Series Data Correctly](/en/post/questdb-asof-join-guide/)
+- [Building K-lines From Financial Ticks: QuestDB SAMPLE BY Computes OHLCV](/en/post/questdb-tick-to-ohlcv-kline/)
+- [Power Load Curve Analysis: QuestDB Metering Data and Peak Demand](/en/post/questdb-power-load-analysis/)

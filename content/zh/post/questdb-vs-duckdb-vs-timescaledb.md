@@ -125,3 +125,13 @@ QuestDB 的 `SAMPLE BY` / `FIRST` / `LATEST` 是**一等公民时序语法**，�
 ---
 
 *实测环境：4C8G / Docker / 2026-10。QuestDB、DuckDB、TimescaleDB 均为各自项目的商标；本站为独立技术社区，非任何官方项目。完整基准方法学见后续《QuestDB 性能基准》篇。*
+
+## 参考
+
+- [DuckDB 官网](https://duckdb.org/)
+- [TimescaleDB 官网](https://www.timescaledb.com/)
+
+## 相关文章
+
+- [QuestDB vs DuckDB：同为又快又轻的数据库，为什么时序场景该选 QuestDB](/zh/post/questdb-vs-duckdb-chinese/)
+- [QuestDB SAMPLE BY 完全指南：时序数据的灵魂聚合语法](/zh/post/questdb-sample-by-complete-guide/)

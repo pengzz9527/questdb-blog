@@ -275,3 +275,14 @@ When messages are genuinely complex, an alternative is to land raw JSON in a sta
 ---
 
 *Configuration verified locally against Kafka 3.9 (KRaft), questdb/kafka-questdb-connector:latest, and QuestDB latest. DEDUP requires QuestDB ≥ 7.3; `wal_tables()` requires ≥ 7.3.1. QuestDB is a trademark of its owner; this site is an independent technical community, not affiliated with QuestDB.*
+
+## References
+
+- [Apache Kafka](https://kafka.apache.org/)
+- [QuestDB docs: INSERT / Line Protocol](https://questdb.io/docs/reference/sql/insert/)
+
+## Related reading
+
+- [QuestDB ILP Ingestion Complete Guide: From Single Rows to High-Throughput Batch](/en/post/questdb-ilp-ingestion-guide/)
+- [Kubernetes Metrics Pipeline: Prometheus Writing Directly to QuestDB with Grafana](/en/post/questdb-k8s-metrics-collection/)
+- [Power Load Curve Analysis: QuestDB Metering Data and Peak Demand](/en/post/questdb-power-load-analysis/)

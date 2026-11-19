@@ -298,3 +298,13 @@ ALTER TABLE cpu DROP PARTITION LIST '2026-09';
 ---
 
 *本文 SQL 在 QuestDB latest（Docker）验证，`approx_percentile` 需 QuestDB ≥ 6.1，`ALTER TABLE ... DEDUP` 需 ≥ 7.3。InfluxDB 侧语法以 1.8 与 2.x 的 InfluxQL 为准；Flux 需按语义手工重写。QuestDB 为其权利人商标，本站为独立技术社区，非官方。*
+
+## 参考
+
+- [InfluxData 官网](https://www.influxdata.com/)
+- [QuestDB 官方文档：INSERT / Line Protocol](https://questdb.io/docs/reference/sql/insert/)
+
+## 相关文章
+
+- [QuestDB ASOF JOIN 完全指南：时序数据对齐的正确方式](/zh/post/questdb-asof-join-guide/)
+- [QuestDB ILP 行协议摄入完全指南：从单行写入到高吞吐批量](/zh/post/questdb-ilp-ingestion-guide/)

@@ -146,3 +146,13 @@ FROM reads_sym;
 ---
 
 *本文基准在 QuestDB `latest` + Docker，100 万行实测。数值会随机型浮动，相对关系稳定。QuestDB 为其权利人商标，本站为独立技术社区，非官方。*
+
+## 参考
+
+- [QuestDB 官方文档：SYMBOL 数据类型](https://questdb.io/docs/concept/symbol/)
+- [QuestDB 官方文档：SELECT](https://questdb.io/docs/reference/sql/select/)
+
+## 相关文章
+
+- [QuestDB ASOF JOIN 完全指南：时序数据对齐的正确方式](/zh/post/questdb-asof-join-guide/)
+- [QuestDB ILP 高并发写入调优：worker 线程、批量与内存参数实测](/zh/post/questdb-ilp-hi-concurrency-tuning/)

@@ -216,3 +216,13 @@ QuestDB 的分区删除是 O(1) 的（直接删目录），不像行式数据库
 ---
 
 *本文在 QuestDB `latest` + Prometheus 2.x + Grafana 11 本地验证。`remote_write` 边车代码为简化示意，生产环境请补全 protobuf 解码和背压逻辑。QuestDB 为其权利人商标，本站为独立技术社区，非官方。*
+
+## 参考
+
+- [Grafana 官方文档](https://grafana.com/docs/grafana/latest/)
+- [Apache Kafka 官网](https://kafka.apache.org/)
+
+## 相关文章
+
+- [Kubernetes 指标采集实战：Prometheus 直写 QuestDB + Grafana 监控](/zh/post/questdb-k8s-metrics-collection/)
+- [零成本自建：QuestDB + Grafana 构建 IoT 传感器仪表板](/zh/post/questdb-grafana-iot-dashboard-zero-cost/)

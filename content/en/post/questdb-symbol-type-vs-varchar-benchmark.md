@@ -146,3 +146,13 @@ Next up: **`PARTITION BY DAY / MONTH` partitioning strategy** — after picking 
 ---
 
 *Benchmarks on QuestDB `latest` + Docker, 1M rows. Absolute numbers vary with hardware; the relative behavior is stable. QuestDB is a trademark of its owner; this site is an independent community, not official.*
+
+## References
+
+- [QuestDB docs: SYMBOL data type](https://questdb.io/docs/concept/symbol/)
+- [QuestDB docs: SELECT](https://questdb.io/docs/reference/sql/select/)
+
+## Related reading
+
+- [QuestDB ASOF JOIN Complete Guide: Aligning Time-Series Data Correctly](/en/post/questdb-asof-join-guide/)
+- [QuestDB ILP High-Concurrency Write Tuning: Workers, Batching & Memory Benchmarks](/en/post/questdb-ilp-hi-concurrency-tuning/)

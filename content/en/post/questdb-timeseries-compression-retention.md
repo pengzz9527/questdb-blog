@@ -98,3 +98,13 @@ After export, run `DELETE FROM device_daily WHERE ts < '2026-02-01'` so the hot 
 ## 6. Next
 
 The next post covers QuestDB anomaly detection in practice — connecting "can archived old data still be queried" with real-time alerting via a rolling Z-score that catches spikes inside the retention window.
+
+## References
+
+- [QuestDB docs: CREATE TABLE](https://questdb.io/docs/reference/sql/create-table/)
+- [QuestDB docs: SHOW](https://questdb.io/docs/reference/sql/show/)
+
+## Related reading
+
+- [QuestDB Data Retention: DROP PARTITION, TTL, and Hot/Cold Tiering](/en/post/questdb-data-retention-lifecycle/)
+- [QuestDB PARTITION BY DAY/MONTH: Partitioning Strategy, Storage & Query Trade-offs](/en/post/questdb-partition-by-day-month/)

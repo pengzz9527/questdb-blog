@@ -243,3 +243,13 @@ The last one is the most commonly skipped. Engineering decides "180 days is plen
 ---
 
 *SQL and scripts verified against QuestDB latest (Docker) on Linux. `partitions()` requires QuestDB ≥ 6.6, `COPY ... WITH FORMAT PARQUET` ≥ 7.0, async partition drops on WAL tables ≥ 7.3. Enterprise TTL syntax differs from the open-source build; consult the official docs. QuestDB is a trademark of its owner; this site is an independent technical community, not affiliated with QuestDB.*
+
+## References
+
+- [QuestDB docs: CREATE TABLE](https://questdb.io/docs/reference/sql/create-table/)
+- [QuestDB docs: SHOW](https://questdb.io/docs/reference/sql/show/)
+
+## Related reading
+
+- [QuestDB Time-Series Compression & Retention: PARTITION BY Auto-Purge and Hot-Cold Tiering](/en/post/questdb-timeseries-compression-retention/)
+- [QuestDB PARTITION BY DAY/MONTH: Partitioning Strategy, Storage & Query Trade-offs](/en/post/questdb-partition-by-day-month/)

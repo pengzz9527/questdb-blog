@@ -157,3 +157,14 @@ ALTER TABLE meter DROP PARTITION LIST '2024-03';
 - 负载曲线 + 同时峰值进 Grafana：接数据源和面板的完整流程见本站《零成本自建 IoT 仪表板》。
 - 对 1 小时曲线做滚动 Z-score 抓负载尖峰：见本站异常检测一文。
 - 电表数量上千的写入并发：见本站《ILP 高并发写入调优》。
+
+## 参考
+
+- [QuestDB 官方文档：SAMPLE BY](https://questdb.io/docs/reference/sql/sample-by/)
+- [QuestDB 官方文档：INSERT / Line Protocol](https://questdb.io/docs/reference/sql/insert/)
+
+## 相关文章
+
+- [QuestDB SAMPLE BY 完全指南：时序数据的灵魂聚合语法](/zh/post/questdb-sample-by-complete-guide/)
+- [QuestDB ILP 行协议摄入完全指南：从单行写入到高吞吐批量](/zh/post/questdb-ilp-ingestion-guide/)
+- [QuestDB + Kafka 实时管道：从 ILP 写入到 SAMPLE BY 聚合](/zh/post/questdb-kafka-connect-pipeline/)

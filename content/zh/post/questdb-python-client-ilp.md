@@ -139,3 +139,14 @@ def safe_write(qdb, line: str) -> None:
 - 写入并发与内存参数 → 本站《ILP 高并发写入调优》。
 - 消息队列侧批量消费 → 本站《QuestDB + Kafka 实时管道》。
 - 回测数据出 K 线 → 本站《金融 tick 数据生成 K 线》。
+
+## 参考
+
+- [QuestDB Python 客户端（PyPI）](https://pypi.org/project/questdb/)
+- [QuestDB 官方文档：INSERT / Line Protocol](https://questdb.io/docs/reference/sql/insert/)
+
+## 相关文章
+
+- [QuestDB ILP 行协议摄入完全指南：从单行写入到高吞吐批量](/zh/post/questdb-ilp-ingestion-guide/)
+- [电力负荷曲线分析：QuestDB 记录用电数据与峰谷负荷计算](/zh/post/questdb-power-load-analysis/)
+- [QuestDB ILP 高并发写入调优：worker 线程、批量与内存参数实测](/zh/post/questdb-ilp-hi-concurrency-tuning/)

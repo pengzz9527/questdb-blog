@@ -197,3 +197,14 @@ SELECT DROP_PARTITION('sensor_daily', '2026_07') ;  -- 具体函数名以版本�
 ---
 
 *本文在 QuestDB `latest` + Grafana 11 + Docker Compose 验证。默认凭据 admin/quest 仅供本地演示。QuestDB 为其权利人商标，本站为独立技术社区，非官方。*
+
+## 参考
+
+- [Grafana 官方文档](https://grafana.com/docs/grafana/latest/)
+- [QuestDB GitHub 仓库](https://github.com/questdb/questdb)
+
+## 相关文章
+
+- [Kubernetes 指标采集实战：Prometheus 直写 QuestDB + Grafana 监控](/zh/post/questdb-k8s-metrics-collection/)
+- [QuestDB ILP 高并发写入调优：worker 线程、批量与内存参数实测](/zh/post/questdb-ilp-hi-concurrency-tuning/)
+- [QuestDB + Kafka 实时管道：从 ILP 写入到 SAMPLE BY 聚合](/zh/post/questdb-kafka-connect-pipeline/)

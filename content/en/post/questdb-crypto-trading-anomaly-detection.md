@@ -167,3 +167,14 @@ Pushing the detection logic into QuestDB SQL means the live alert and the histor
 ---
 
 *SQL verified on QuestDB `latest` in a local Docker environment. `QUALIFY` / `LAG` / `STDEV` window support requires version ≥ 8.0. QuestDB is a trademark of its respective owner; this site is an independent technical community, not official.*
+
+## References
+
+- [QuestDB docs: SELECT](https://questdb.io/docs/reference/sql/select/)
+- [Python statistics stdlib docs](https://docs.python.org/3/library/statistics.html)
+
+## Related reading
+
+- [QuestDB Anomaly Detection in Practice: Rolling Z-Score & Financial Tick De-Dup Backtest](/en/post/questdb-anomaly-detection-zscore/)
+- [Building K-lines From Financial Ticks: QuestDB SAMPLE BY Computes OHLCV](/en/post/questdb-tick-to-ohlcv-kline/)
+- [QuestDB SAMPLE BY Complete Guide: The Soul of Time-Series Aggregation](/en/post/questdb-sample-by-complete-guide/)

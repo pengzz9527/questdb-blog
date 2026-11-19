@@ -202,3 +202,14 @@ FROM cpu;"
 ---
 
 *本文所有命令在 QuestDB `latest` + Docker 24 / Linux x86_64 下验证通过。QuestDB 为其权利人商标，本站为独立技术社区，非官方。*
+
+## 参考
+
+- [QuestDB 官方文档：INSERT / Line Protocol](https://questdb.io/docs/reference/sql/insert/)
+- [Apache Kafka 官网](https://kafka.apache.org/)
+
+## 相关文章
+
+- [QuestDB ILP 高并发写入调优：worker 线程、批量与内存参数实测](/zh/post/questdb-ilp-hi-concurrency-tuning/)
+- [电力负荷曲线分析：QuestDB 记录用电数据与峰谷负荷计算](/zh/post/questdb-power-load-analysis/)
+- [QuestDB + Kafka 实时管道：从 ILP 写入到 SAMPLE BY 聚合](/zh/post/questdb-kafka-connect-pipeline/)

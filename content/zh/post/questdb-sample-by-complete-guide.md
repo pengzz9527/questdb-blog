@@ -166,3 +166,14 @@ SAMPLE BY 5m;
 ---
 
 *本文 SQL 在 QuestDB `latest` 实测通过。QuestDB 为其权利人商标，本站为独立技术社区。*
+
+## 参考
+
+- [QuestDB 官方文档：SAMPLE BY](https://questdb.io/docs/reference/sql/sample-by/)
+- [QuestDB 官方文档：SELECT](https://questdb.io/docs/reference/sql/select/)
+
+## 相关文章
+
+- [QuestDB ASOF JOIN 完全指南：时序数据对齐的正确方式](/zh/post/questdb-asof-join-guide/)
+- [金融 tick 数据生成 K 线：QuestDB SAMPLE BY 计算 OHLCV](/zh/post/questdb-tick-to-ohlcv-kline/)
+- [电力负荷曲线分析：QuestDB 记录用电数据与峰谷负荷计算](/zh/post/questdb-power-load-analysis/)

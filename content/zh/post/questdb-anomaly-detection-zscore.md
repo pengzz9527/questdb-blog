@@ -160,3 +160,14 @@ WINDOW w AS (PARTITION BY host ORDER BY ts ROWS 60 PRECEDING);
 ## 六、下一步
 
 上一篇讲了数据保留与冷热分层，这篇把保留期内的数据用起来做检测。再往下可以接：把 Z-score 结果写回一张 `anomaly` 表，配 `SAMPLE BY` 出每小时异常计数面板，形成"检测→告警→回溯"闭环。
+
+## 参考
+
+- [QuestDB 官方文档：SELECT](https://questdb.io/docs/reference/sql/select/)
+- [Python statistics 标准库文档](https://docs.python.org/3/library/statistics.html)
+
+## 相关文章
+
+- [QuestDB + Kafka 实时管道：从 ILP 写入到 SAMPLE BY 聚合](/zh/post/questdb-kafka-connect-pipeline/)
+- [QuestDB SAMPLE BY 完全指南：时序数据的灵魂聚合语法](/zh/post/questdb-sample-by-complete-guide/)
+- [QuestDB 加密交易异常检测：tick 数据实时告警实战](/zh/post/questdb-crypto-trading-anomaly-detection/)

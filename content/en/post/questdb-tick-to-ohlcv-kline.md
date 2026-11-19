@@ -179,3 +179,14 @@ WHERE t.symbol = '600519' AND i.symbol = 'SPY';
 - **Charts**: put the candle table into a Grafana candlestick panel; see our zero-cost IoT dashboard article for wiring Grafana to QuestDB end to end.
 - **Backtesting**: read 1m candles, align with `ASOF JOIN`, and compute strategy signals in your backtester.
 - **Outliers**: rolling Z-score on 1m closes — see our anomaly detection article for the exact pattern.
+
+## References
+
+- [QuestDB docs: SAMPLE BY](https://questdb.io/docs/reference/sql/sample-by/)
+- [QuestDB docs: ASOF JOIN](https://questdb.io/docs/reference/sql/asof-join/)
+
+## Related reading
+
+- [QuestDB SAMPLE BY Complete Guide: The Soul of Time-Series Aggregation](/en/post/questdb-sample-by-complete-guide/)
+- [QuestDB Crypto Trading Anomaly Detection: Real-Time Tick Alerts in Practice](/en/post/questdb-crypto-trading-anomaly-detection/)
+- [QuestDB Anomaly Detection in Practice: Rolling Z-Score & Financial Tick De-Dup Backtest](/en/post/questdb-anomaly-detection-zscore/)

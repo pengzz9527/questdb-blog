@@ -286,3 +286,14 @@ Kafka Connect 的价值不在于它"更好"，而在于它把这些边角问题�
 ---
 
 *本文配置在 Kafka 3.9（KRaft）+ questdb/kafka-questdb-connector:latest + QuestDB latest 本地验证。DEDUP 需 QuestDB ≥ 7.3，`wal_tables()` 需 ≥ 7.3.1。QuestDB 为其权利人商标，本站为独立技术社区，非官方。*
+
+## 参考
+
+- [Apache Kafka 官网](https://kafka.apache.org/)
+- [QuestDB 官方文档：INSERT / Line Protocol](https://questdb.io/docs/reference/sql/insert/)
+
+## 相关文章
+
+- [QuestDB ILP 行协议摄入完全指南：从单行写入到高吞吐批量](/zh/post/questdb-ilp-ingestion-guide/)
+- [Kubernetes 指标采集实战：Prometheus 直写 QuestDB + Grafana 监控](/zh/post/questdb-k8s-metrics-collection/)
+- [电力负荷曲线分析：QuestDB 记录用电数据与峰谷负荷计算](/zh/post/questdb-power-load-analysis/)

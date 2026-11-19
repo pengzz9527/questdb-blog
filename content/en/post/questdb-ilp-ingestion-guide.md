@@ -193,3 +193,14 @@ If the row count matches and the time range looks right, the ingestion path is w
 ---
 
 *All commands verified on QuestDB `latest` + Docker 24 / Linux x86_64. QuestDB is a trademark of its respective owner; this site is an independent technical community, not official.*
+
+## References
+
+- [QuestDB docs: INSERT / Line Protocol](https://questdb.io/docs/reference/sql/insert/)
+- [Apache Kafka](https://kafka.apache.org/)
+
+## Related reading
+
+- [QuestDB ILP High-Concurrency Write Tuning: Workers, Batching & Memory Benchmarks](/en/post/questdb-ilp-hi-concurrency-tuning/)
+- [Power Load Curve Analysis: QuestDB Metering Data and Peak Demand](/en/post/questdb-power-load-analysis/)
+- [QuestDB + Kafka Real-Time Pipeline: ILP Ingestion to SAMPLE BY Rollups](/en/post/questdb-kafka-connect-pipeline/)

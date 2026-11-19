@@ -218,3 +218,13 @@ If the core ask is "metrics + business logs + custom tables all joinable in one 
 ---
 
 *Verified on QuestDB `latest` + Prometheus 2.x + Grafana 11 locally. The `remote_write` sidecar code is simplified for illustration; complete the protobuf decode and backpressure logic before shipping. QuestDB is a trademark of its respective owner; this site is an independent technical community, not official.*
+
+## References
+
+- [Grafana docs](https://grafana.com/docs/grafana/latest/)
+- [Apache Kafka](https://kafka.apache.org/)
+
+## Related reading
+
+- [Kubernetes Metrics Pipeline: Prometheus Writing Directly to QuestDB with Grafana](/en/post/questdb-k8s-metrics-collection/)
+- [Zero-Cost Self-Hosted: QuestDB + Grafana IoT Sensor Dashboard](/en/post/questdb-grafana-iot-dashboard-zero-cost/)

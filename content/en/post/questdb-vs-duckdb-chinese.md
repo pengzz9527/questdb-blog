@@ -120,3 +120,13 @@ Don't pick by "which is fastest" alone — pick by **"what your data looks like,
 *Test env: 4C8G / Docker / 2026-10. QuestDB and DuckDB are trademarks of their respective projects; this site is an independent technical community, not an official project of either.*
 
 > If your scenario falls between "real-time stream" and "file analysis," drop a comment describing how your data gets in and who queries it — we'll help you pick the right engine.
+
+## References
+
+- [DuckDB](https://duckdb.org/)
+- [TimescaleDB](https://www.timescaledb.com/)
+
+## Related reading
+
+- [QuestDB vs DuckDB vs TimescaleDB: In-Depth Time-Series Selection Guide with Benchmarks](/en/post/questdb-vs-duckdb-vs-timescaledb/)
+- [QuestDB Installation & Quick Start: From Docker to Your First ILP Write (2026)](/en/post/questdb-install-guide/)

@@ -132,3 +132,13 @@ ALTER TABLE sensor_v2 RENAME TO sensor;
 ---
 
 *本文 SQL 在 QuestDB `latest` 实测通过。分区文件命名与 `i_partitions` 随版本可能微调。QuestDB 为其权利人商标，本站为独立技术社区，非官方。*
+
+## 参考
+
+- [QuestDB 官方文档：CREATE TABLE](https://questdb.io/docs/reference/sql/create-table/)
+- [QuestDB 官方文档：SHOW](https://questdb.io/docs/reference/sql/show/)
+
+## 相关文章
+
+- [QuestDB 数据保留策略：DROP PARTITION、TTL 与冷热分层](/zh/post/questdb-data-retention-lifecycle/)
+- [QuestDB 时序数据压缩与保留策略：PARTITION BY 自动删除 + 冷热分层](/zh/post/questdb-timeseries-compression-retention/)

@@ -186,3 +186,13 @@ ILP 行格式错。99% 是 **timestamp 单位写错**——QuestDB 要 **纳秒*
 ---
 
 *本文基于 QuestDB 官方文档（questdb.io/docs）与 2026-10 实测命令编写。QuestDB 是 QuestDB 的商标，本站为独立技术社区，非官方。*
+
+## 参考
+
+- [QuestDB GitHub 仓库](https://github.com/questdb/questdb)
+- [QuestDB 官方文档：CREATE TABLE](https://questdb.io/docs/reference/sql/create-table/)
+
+## 相关文章
+
+- [QuestDB SQL 速查表：SAMPLE BY / ASOF JOIN / SYMBOL / 分区一页汇总](/zh/post/questdb-cheatsheet/)
+- [QuestDB ILP 行协议摄入完全指南：从单行写入到高吞吐批量](/zh/post/questdb-ilp-ingestion-guide/)
